@@ -1,0 +1,10 @@
+output.elasticsearch:
+  hosts:
+    - 127.0.0.1:9200
+  template.name: filebeat
+  template.path: filebeat.template.json
+
+filebeat.prospectors:
+- paths:
+    - ${PWD}/log/lograge_development.log
+  json.keys_under_root: true

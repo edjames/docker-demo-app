@@ -1,0 +1,9 @@
+defaults: &defaults
+  memcached_server: 127.0.0.1:11211
+  redis_url: 'redis://127.0.0.1:6379'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
